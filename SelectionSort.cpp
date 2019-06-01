@@ -1,5 +1,5 @@
 // Selectionsort
-// Time complexity: O(n^2) but the number of swaps will be O(n) in case the elements are in sorted order
+// Time complexity: O(n^2) but the number of swaps will be O(n) in the worst case
 // Space complexity: O(n)
 
 
@@ -7,7 +7,7 @@
 #include <vector>
 #include "./Headerfiles/Helperfunctions.h"
 
-const int SIZE = 20;
+const int SIZE = 30;
 const int MOD = 100;
 
 using namespace std;
