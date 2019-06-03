@@ -41,16 +41,16 @@ struct Node* create_node(int data){
 int main(){
   struct Node *head=NULL,*ptr,*temp,*t;
 
-  int option;
+  char option;
   do{
     cout << "Please enter the option:" << endl;
     cout << "1.Show 2.Insert 3.Delete 4.Exit" <<endl;
     cin >> option;
 
     switch(option){
-      case 1: show(head);
+      case '1': show(head);
               break;
-      case 2: cout << "Please enter the value:";
+      case '2': cout << "Please enter the value:";
               int val;
               cin >> val;
               temp = create_node(val);
@@ -63,9 +63,11 @@ int main(){
                 head = temp;
               }
               break;
-      case 3: head = delete_node(head);
+      case '3': head = delete_node(head);
               break;
-      case 4:exit(1);
+      case '4':exit(1);
+      default: cout << "Please enter the valid option"<< endl;
+               break;
     }
-  }while(option!=4);
+  }while(option!='4');
 }

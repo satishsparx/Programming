@@ -22,7 +22,7 @@ int main(){
 
   struct Node *head=NULL, *ptr, *temp, *it, *t, *temp1;
 
-  int option;
+  char option;
 
   do{
     cout << "Please select the option" << endl;
@@ -31,9 +31,9 @@ int main(){
     cin >> option;
 
     switch(option){
-      case 1: show(head);
+      case '1': show(head);
               break;
-      case 2: cout << "Please enter the value:";
+      case '2': cout << "Please enter the value:";
               int val;
               cin >> val;
               temp = new Node;
@@ -50,7 +50,7 @@ int main(){
               }
 
               break;
-      case 3: {
+      case '3': {
               cout << "Please enter the position of value to be deleted:";
               int pos;
               int count = 1;
@@ -80,7 +80,9 @@ int main(){
             }
 
               break;
-      case 4: exit(0);
+      case '4': exit(0);
+      default: cout << "Please enter the valid option"<< endl;
+               break;
     }
-  }while(option!=4);
+  }while(option!='4');
 }
