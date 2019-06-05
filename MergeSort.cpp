@@ -36,12 +36,10 @@ void mergeLists(vector<int> &b, int low,int mid,int high) {
     }
   }
 
-  for(int i=0;i<=list2_high;i++){
+  int l = temp_list.size()-1;
+  for(int i=0;i<=l;i++){
     b[i+low] = temp_list[i];
   }
-
-  display(b);
-
 }
 
 void mergeSort(vector<int> &a,int low,int high){
